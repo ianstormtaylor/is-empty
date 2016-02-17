@@ -22,9 +22,10 @@ var has = Object.prototype.hasOwnProperty;
 
 function isEmpty (val) {
   if (null == val) return true;
+  if ('boolean' == typeof val) return false;
   if ('number' == typeof val) return 0 === val;
   if (undefined !== val.length) return 0 === val.length;
   for (var key in val) if (has.call(val, key)) return false;
-  if (typeof val === 'boolean') return false;
+  
   return true;
 }
