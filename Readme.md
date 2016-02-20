@@ -24,6 +24,8 @@ empty(function(){});    // true
 empty(null);            // true
 empty(undefined);       // true
 
+empty(true);			// false
+empty(false);			// false
 empty(['a', 'b']);      // false
 empty({ a: 'b' });      // false
 empty('string');        // false

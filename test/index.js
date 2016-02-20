@@ -1,3 +1,4 @@
+var should = require('should');
 describe('is-empty', function () {
 
 var empty = require('..');
@@ -31,5 +32,11 @@ it('handles nulls', function () {
   empty(null).should.be.true;
   empty(undefined).should.be.true;
 });
+
+it('handles booleans', function () {
+  empty(false).should.be.false;
+  empty(true).should.be.false;
+});
+
 
 });
