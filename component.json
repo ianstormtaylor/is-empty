@@ -2,7 +2,7 @@
   "name": "is-empty",
   "repo": "ianstormtaylor/is-empty",
   "description": "Check whether a value is empty.",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "keywords": ["empty", "array", "object"],
   "license": "MIT",
   "scripts": ["index.js"]

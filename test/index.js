@@ -1,6 +1,6 @@
-var should = require('should');
 describe('is-empty', function () {
 
+var should = require('should');
 var empty = require('..');
 
 it('handles arrays', function () {
