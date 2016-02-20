@@ -6,6 +6,6 @@
   "keywords": ["empty", "array", "object"],
   "devDependencies": {
     "mocha": "^2.4.5",
-    "should": "*"
+    "should": "^8.2.2"
   }
 }
