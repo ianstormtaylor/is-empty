@@ -5,7 +5,7 @@
   "version": "0.1.0",
   "keywords": ["empty", "array", "object"],
   "devDependencies": {
-    "mocha": "*",
+    "mocha": "^2.4.5",
     "should": "*"
   }
 }
