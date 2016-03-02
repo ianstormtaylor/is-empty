@@ -38,5 +38,4 @@ it('handles booleans', function () {
   empty(true).should.be.false;
 });
 
-
 });

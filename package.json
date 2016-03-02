@@ -2,7 +2,7 @@
   "name": "is-empty",
   "repository": "https://github.com/ianstormtaylor/is-empty.git",
   "description": "Check whether a value is empty.",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "keywords": ["empty", "array", "object"],
   "devDependencies": {
     "mocha": "^2.4.5",
