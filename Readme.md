@@ -6,9 +6,6 @@
 ## Installation
   
 ```
-$ component install ianstormtaylor/is-empty
-```
-```
 $ npm install is-empty
 ```
 
