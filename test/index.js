@@ -1,58 +1,56 @@
+
+var empty = require('..')
+
 describe('is-empty', function () {
+  it('handles arrays', function () {
+    assert(empty([]) == true)
+    assert(empty(['a', 'b']) == false)
+  })
 
-var should = require('should');
-var empty = require('..');
+  it('handles objects', function () {
+    assert(empty({}) == true)
+    assert(empty({ a: 'b' }) == false)
+    assert(empty({'length': 0}) == false)
+  })
 
-it('handles arrays', function () {
-  empty([]).should.be.true();
-  empty(['a', 'b']).should.be.false();
-});
+  it('handles strings', function () {
+    assert(empty('') == true)
+    assert(empty('string') == false)
+  })
 
-it('handles objects', function () {
-  empty({}).should.be.true();
-  empty({ a: 'b' }).should.be.false();
-  empty({'length': 0}).should.be.false();
-});
+  it('handles numbers', function () {
+    assert(empty(0) == true)
+    assert(empty(42) == false)
+  })
 
-it('handles strings', function () {
-  empty('').should.be.true();
-  empty('string').should.be.false();
-});
+  it('handles functions', function () {
+    assert(empty(function(){}) == true)
+    assert(empty(function(a,b){}) == false)
+  })
 
-it('handles numbers', function () {
-  empty(0).should.be.true();
-  empty(42).should.be.false();
-});
+  it('handles nulls', function () {
+    assert(empty(null) == true)
+    assert(empty(undefined) == true)
+  })
 
-it('handles functions', function () {
-  empty(function(){}).should.be.true();
-  empty(function(a,b){}).should.be.false();
-});
+  it('handles booleans', function () {
+    assert(empty(false) == false)
+    assert(empty(true) == false)
+  })
 
-it('handles nulls', function () {
-  empty(null).should.be.true();
-  empty(undefined).should.be.true();
-});
+  it('handles maps', function () {
+    assert(empty(new Map()) == true)
+    assert(empty(new Map([['key', 'value']])) == false)
+  })
 
-it('handles booleans', function () {
-  empty(false).should.be.false();
-  empty(true).should.be.false();
-});
+  it('handles sets', function () {
+    assert(empty(new Set()) == true)
+    assert(empty(new Set([1,2,3,4])) == false)
+  })
 
-it('handles maps', function () {
-  empty(new Map()).should.be.true();
-  empty(new Map([['key', 'value']])).should.be.false();
-});
-
-it('handles sets', function () {
-  empty(new Set()).should.be.true();
-  empty(new Set([1,2,3,4])).should.be.false();
-});
-
-it('handles errors', function () {
-  empty(new Error()).should.be.true();
-  empty(new Error('')).should.be.true();
-  empty(new Error('test')).should.be.false();
-});
-
-});
+  it('handles errors', function () {
+    assert(empty(new Error()) == true)
+    assert(empty(new Error('')) == true)
+    assert(empty(new Error('test')) == false)
+  })
+})

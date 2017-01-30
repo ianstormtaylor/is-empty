@@ -1,17 +1,9 @@
 
 /**
- * Expose `isEmpty`.
+ * Has own property.
  */
 
-module.exports = isEmpty;
-
-
-/**
- * Has.
- */
-
-var has = Object.prototype.hasOwnProperty;
-
+var has = Object.prototype.hasOwnProperty
 
 /**
  * Test whether a value is "empty".
@@ -20,21 +12,49 @@ var has = Object.prototype.hasOwnProperty;
  * @return {Boolean}
  */
 
-function isEmpty (val) {
-  if (null == val) return true;
-  if ('boolean' == typeof val) return false;
-  if ('number' == typeof val) return 0 === val;
-  if (val.toString) { 
+function isEmpty(val) {
+  // Null and Undefined...
+  if (null == val) return true
+
+  // Booleans...
+  if ('boolean' == typeof val) return false
+
+  // Numbers...
+  if ('number' == typeof val) return 0 === val
+
+  // Maps, Sets, Files and Errors...
+  if (val.toString) {
+    const string = val.toString()
+
     if (
-      val.toString() === '[object Map]' ||
-      val.toString() === '[object Set]' ||
-      val.toString() === '[object File]'
-    ) return !val.size;
-    if (
-      val.toString().startsWith('Error')
-    ) return !val.message;      
+      string == '[object Map]' ||
+      string == '[object Set]' ||
+      string == '[object File]'
+    ) {
+      return !val.size
+    }
+
+    if (string.startsWith('Error')) {
+      return !val.message
+    }
   }
-  for (var key in val) if (has.call(val, key)) return false;
-  if (undefined !== val.length) return 0 === val.length;
-  return true;
+
+  // Plain objects...
+  for (var key in val) {
+    if (has.call(val, key)) return false
+  }
+
+  // Arrays...
+  if (undefined !== val.length) return 0 === val.length
+
+  // Nothing...
+  return true
 }
+
+/**
+ * Export `isEmpty`.
+ *
+ * @type {Function}
+ */
+
+module.exports = isEmpty
