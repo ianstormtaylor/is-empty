@@ -3,9 +3,13 @@
   "repository": "https://github.com/ianstormtaylor/is-empty.git",
   "description": "Check whether a value is empty.",
   "version": "1.0.0",
+  "license": "MIT",
   "keywords": ["empty", "array", "object"],
+  "scripts": {
+    "test": "mocha"
+  },
   "devDependencies": {
-    "mocha": "^2.4.5",
-    "should": "^8.2.2"
+    "mocha": "^3.2.0",
+    "should": "^11.2.0"
   }
 }
