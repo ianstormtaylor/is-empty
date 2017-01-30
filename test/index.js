@@ -49,4 +49,10 @@ it('handles sets', function () {
   empty(new Set([1,2,3,4])).should.be.false();
 });
 
+it('handles errors', function () {
+  empty(new Error()).should.be.true();
+  empty(new Error('')).should.be.true();
+  empty(new Error('test')).should.be.false();
+});
+
 });

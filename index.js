@@ -30,6 +30,9 @@ function isEmpty (val) {
       val.toString() === '[object Set]' ||
       val.toString() === '[object File]'
     ) return !val.size;
+    if (
+      val.toString().startsWith('Error')
+    ) return !val.message;      
   }
   for (var key in val) if (has.call(val, key)) return false;
   if (undefined !== val.length) return 0 === val.length;
