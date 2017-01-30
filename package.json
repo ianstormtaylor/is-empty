@@ -4,6 +4,7 @@
   "description": "Check whether a value is \"empty\".",
   "repository": "https://github.com/ianstormtaylor/is-empty.git",
   "license": "MIT",
+  "main": "./lib/index.js",
   "scripts": {
     "test": "mocha"
   },

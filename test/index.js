@@ -1,4 +1,5 @@
 
+var assert = require('assert')
 var empty = require('..')
 
 describe('is-empty', function () {
