@@ -1,4 +1,9 @@
 
+1.1.0 - January 30, 2017
+------------------------
+* add support for `Map`, `Set`, `File` and `Error`
+* fix array and object detection
+
 1.0.0 - March 2, 2016
 ---------------------
 * remove component support
