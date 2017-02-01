@@ -1,6 +1,6 @@
 {
   "name": "is-empty",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "Check whether a value is \"empty\".",
   "repository": "https://github.com/ianstormtaylor/is-empty.git",
   "license": "MIT",
