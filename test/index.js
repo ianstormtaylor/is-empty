@@ -11,12 +11,13 @@ describe('is-empty', function () {
   it('handles objects', function () {
     assert(empty({}) == true)
     assert(empty({ a: 'b' }) == false)
-    assert(empty({'length': 0}) == false)
+    assert(empty({ length: 0 }) == false)
   })
 
   it('handles strings', function () {
     assert(empty('') == true)
     assert(empty('string') == false)
+    assert(empty('Error') == false)
   })
 
   it('handles numbers', function () {
@@ -32,6 +33,7 @@ describe('is-empty', function () {
   it('handles nulls', function () {
     assert(empty(null) == true)
     assert(empty(undefined) == true)
+    assert(empty() == true)
   })
 
   it('handles booleans', function () {

@@ -1,4 +1,9 @@
 
+1.1.1 - February 1, 2017
+------------------------
+* fix `Error` testing
+* refactor to be less confusing
+
 1.1.0 - January 30, 2017
 ------------------------
 * add support for `Map`, `Set`, `File` and `Error`
