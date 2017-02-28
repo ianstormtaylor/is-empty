@@ -26,8 +26,9 @@ describe('is-empty', function () {
   })
 
   it('handles functions', function () {
-    assert(empty(function(){}) == true)
+    assert(empty(function(){}) == false)
     assert(empty(function(a,b){}) == false)
+    assert(empty(function(){return 1;}) == false)
   })
 
   it('handles nulls', function () {
