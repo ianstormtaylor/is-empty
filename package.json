@@ -6,9 +6,11 @@
   "license": "MIT",
   "main": "./lib/index.js",
   "scripts": {
-    "test": "mocha"
+    "test": "mocha",
+    "build:test": "browserify ./test/index.js -o ./test/browser.index.js"
   },
   "devDependencies": {
+    "browserify": "^14.3.0",
     "mocha": "^3.2.0"
   },
   "keywords": [

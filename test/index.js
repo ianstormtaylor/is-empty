@@ -57,4 +57,11 @@ describe('is-empty', function () {
     assert(empty(new Error('')) == true)
     assert(empty(new Error('test')) == false)
   })
+
+  it ('handles browser-related objects', function () {
+    if ('undefined' !== typeof window) {
+      assert(empty(window) == false)
+      assert(empty(window.Intl) == false)
+    }
+  });
 })
