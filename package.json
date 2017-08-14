@@ -5,6 +5,8 @@
   "repository": "https://github.com/ianstormtaylor/is-empty.git",
   "license": "MIT",
   "main": "./lib/index.js",
+  "types": "./lib/index.d.ts",
+  "type":
   "scripts": {
     "test": "mocha"
   },
