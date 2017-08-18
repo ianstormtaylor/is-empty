@@ -4,4 +4,5 @@
  * @param {Mixed} val
  * @return {Boolean}
  */
-export declare function isEmpty(val:any):Boolean;
+declare const isEmpty:(val:any)=>Boolean;
+export = isEmpty;
