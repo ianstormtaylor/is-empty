@@ -18,13 +18,13 @@ var empty = require('is-empty');
 empty([]);              // true
 empty({});              // true
 empty('');              // true
-empty(0);               // true
 empty(null);            // true
 empty(undefined);       // true
 empty(new Map());       // true
 empty(new Set());       // true
 empty(new Error());     // true
 
+empty(0);               // false
 empty(true);            // false
 empty(false);           // false
 empty(['a', 'b']);      // false
@@ -45,8 +45,8 @@ empty(new Error('fail'))// false
   Check whether `value` is empty.
 
 ## Testing
-- ***[Shell]***: `npm test`
-- ***[Browser]***: `npm run build:test` then open file `runner.html` in the browser
+- ***Shell***: `npm test`
+- ***Browser***: `npm run build:test` then open file `runner.html` in the browser
 
 ## License
 

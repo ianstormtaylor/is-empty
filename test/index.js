@@ -21,7 +21,7 @@ describe('is-empty', function () {
   })
 
   it('handles numbers', function () {
-    assert(empty(0) == true)
+    assert(empty(0) == false)
     assert(empty(42) == false)
   })
 

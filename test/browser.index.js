@@ -38,7 +38,7 @@ function isEmpty(val) {
   if ('boolean' == typeof val) return false
 
   // Numbers...
-  if ('number' == typeof val) return val === 0
+  if ('number' == typeof val) return false;
 
   // Strings...
   if ('string' == typeof val) return val.length === 0
@@ -1411,7 +1411,7 @@ describe('is-empty', function () {
   })
 
   it('handles numbers', function () {
-    assert(empty(0) == true)
+    assert(empty(0) == false)
     assert(empty(42) == false)
   })
 
