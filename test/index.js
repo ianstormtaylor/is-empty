@@ -12,6 +12,7 @@ describe('is-empty', function () {
     assert(empty({}) == true)
     assert(empty({ a: 'b' }) == false)
     assert(empty({ length: 0 }) == false)
+    assert(empty({ [Symbol()]: 1 }) == false)
   })
 
   it('handles strings', function () {
