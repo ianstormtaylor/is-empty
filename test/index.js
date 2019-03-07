@@ -16,6 +16,7 @@ describe('is-empty', function () {
 
   it('handles strings', function () {
     assert(empty('') == true)
+    assert(empty(' ') == true)
     assert(empty('string') == false)
     assert(empty('Error') == false)
   })
