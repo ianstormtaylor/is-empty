@@ -21,13 +21,14 @@ describe('is-empty', function () {
   })
 
   it('handles numbers', function () {
-    assert(empty(0) == true)
+    assert(empty(0) == false)
     assert(empty(42) == false)
   })
 
   it('handles functions', function () {
-    assert(empty(function(){}) == true)
+    assert(empty(function(){}) == false)
     assert(empty(function(a,b){}) == false)
+    assert(empty(function(){return 1;}) == false)
   })
 
   it('handles nulls', function () {
@@ -56,4 +57,11 @@ describe('is-empty', function () {
     assert(empty(new Error('')) == true)
     assert(empty(new Error('test')) == false)
   })
+
+  it ('handles browser-related objects', function () {
+    if ('undefined' !== typeof window) {
+      assert(empty(window) == false)
+      assert(empty(window.Intl) == false)
+    }
+  });
 })
